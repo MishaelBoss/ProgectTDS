@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 39fda419481d9ce4fbe83e1e21824c1a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SAIBA-45
+  fontNames:
+  - SAIBA-45
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 840f98a22a6cdfb4b86ea3738468f364, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
