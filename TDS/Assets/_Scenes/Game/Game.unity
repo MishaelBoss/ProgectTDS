@@ -823,6 +823,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3691719151303874426}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &323673878 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3691719150877571593, guid: b75a3eb657aba714b85bb2156696a0f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3691719151303874426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &357923805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &726646051
 Transform:
   m_ObjectHideFlags: 0
@@ -3091,6 +3097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 726646051}
+  cameraLink: {fileID: 323673878}
+  distance: 5
 --- !u!1 &1768948155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3773,8 @@ GameObject:
   - component: {fileID: 162121036352020221}
   - component: {fileID: 2718491666525057496}
   - component: {fileID: 2718491666525057495}
+  - component: {fileID: 2718491666525057497}
+  - component: {fileID: 2718491666525057498}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -3817,6 +3827,35 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2718491666525057497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718491666525057494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964d4513b1946ef488c9dded1629b7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 100
+  SliderHelth: {fileID: 619243993}
+  canvas: {fileID: 1188378695}
+--- !u!136 &2718491666525057498
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718491666525057494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &2840293738601664707
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3954,6 +3993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691719150755743318, guid: b75a3eb657aba714b85bb2156696a0f0,
+        type: 3}
+      propertyPath: _jumpForce
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b75a3eb657aba714b85bb2156696a0f0, type: 3}
