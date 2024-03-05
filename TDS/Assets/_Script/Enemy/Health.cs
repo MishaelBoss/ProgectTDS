@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int value = 100;
+    public int _value = 100;
 
     [Header("UI")]
     public Slider SliderHelth;
@@ -13,12 +11,13 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
+        SliderHelth.value = _value;
         canvas.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (value <= 0)
+        if (_value <= 0)
             Die();
     }
 
@@ -28,7 +27,5 @@ public class Health : MonoBehaviour
     }
 
     void Die()
-    {
-        Destroy(gameObject);
-    }
+        => Destroy(gameObject);
 }
