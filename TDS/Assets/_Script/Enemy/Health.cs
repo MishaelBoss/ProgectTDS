@@ -15,16 +15,15 @@ public class Health : MonoBehaviour
         canvas.gameObject.SetActive(false);
     }
 
-    private void Update()
+    private void Update(float damage)
     {
+        SliderHelth.value -= damage;
         if (_value <= 0)
             Die();
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
-        canvas.gameObject.SetActive(true);
-    }
+        => canvas.gameObject.SetActive(true);
 
     void Die()
         => Destroy(gameObject);
