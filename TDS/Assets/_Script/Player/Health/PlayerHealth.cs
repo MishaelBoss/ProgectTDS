@@ -33,4 +33,9 @@ public class PlayerHealth : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    public void AddHealth(float amout) {
+        _value += amout;
+        SliderHelth.value += amout;
+    }
 }
