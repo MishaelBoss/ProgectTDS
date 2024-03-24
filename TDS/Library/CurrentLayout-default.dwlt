@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 130
+  controlID: 18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 131
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 132
+  controlID: 70
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 133
+  controlID: 71
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -458,10 +458,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -455
-    m_HBaseRangeMax: 455
-    m_VBaseRangeMin: -256
-    m_VBaseRangeMax: 256
+    m_HBaseRangeMin: -474
+    m_HBaseRangeMax: 474
+    m_VBaseRangeMin: -266.5
+    m_VBaseRangeMax: 266.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -478,11 +478,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1149
-      height: 512
+      height: 533
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 574.5, y: 256}
+    m_Translation: {x: 574.5, y: 266.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -490,9 +490,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -574.5
-      y: -256
+      y: -266.5
       width: 1149
-      height: 512
+      height: 533
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1149, y: 533}
@@ -530,9 +530,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 883d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9edfffffa8f9ffff62fbffff
+      m_ExpandedIDs: 62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -592,9 +592,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.80982697, y: -5.813487, z: -22.533184}
+    m_Target: {x: -4.112068, y: -3.836441, z: 12.813841}
     speed: 2
-    m_Value: {x: -0.80982697, y: -5.813487, z: -22.533184}
+    m_Value: {x: -4.112068, y: -3.836441, z: 12.813841}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -640,13 +640,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.25921056, y: 0.066355824, z: -0.017698674, w: -0.96345335}
+    m_Target: {x: -0.085664935, y: 0.9079057, z: -0.34202567, w: -0.22701938}
     speed: 2
-    m_Value: {x: -0.2620254, y: 0.06918498, z: -0.01868255, w: -0.9623966}
+    m_Value: {x: -0.09282108, y: 0.90287054, z: -0.34012586, w: -0.24601543}
   m_Size:
-    m_Target: 9.919247
+    m_Target: 5.831836
     speed: 2
-    m_Value: 9.919247
+    m_Value: 5.531836
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -791,20 +791,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefabs/granade
+    - Assets/materials
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/prefabs/granade
+  - Assets/materials
   m_LastFoldersGridSize: 71
   m_LastProjectPath: C:\Users\micha\Documents\GitHub\ProgectTDS\TDS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 136}
-    m_SelectedIDs: 663d0000
-    m_LastClickedID: 15718
-    m_ExpandedIDs: 000000004c3d0000503d0000603d0000a03d000000ca9a3b
+    scrollPos: {x: 0, y: 44}
+    m_SelectedIDs: 883d0000
+    m_LastClickedID: 15752
+    m_ExpandedIDs: 00000000663d0000923d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -832,7 +832,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c3d0000
+    m_ExpandedIDs: 00000000663d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
