@@ -15,8 +15,7 @@ public class Health : MonoBehaviour
         canvas.gameObject.SetActive(false);
     }
 
-    private void Update(float damage)
-    {
+    public void DealDamage(float damage) {
         SliderHelth.value -= damage;
         if (_value <= 0)
             Die();
