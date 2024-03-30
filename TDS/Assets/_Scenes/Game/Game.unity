@@ -107,18 +107,18 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.2
     ledgeDropHeight: 2.1
     maxJumpAcrossDistance: 3.1
-    minRegionArea: 2
+    minRegionArea: 4
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: bc3bcaaa25b0f21499342cda89feebfb, type: 2}
@@ -1567,13 +1567,13 @@ MonoBehaviour:
     experienceForceTheNextLevel: 3000
   - fireballDamage: 74
     grenadeDamage: 150
-    experienceForceTheNextLevel: 4500
+    experienceForceTheNextLevel: 3200
   - fireballDamage: 95
     grenadeDamage: 190
-    experienceForceTheNextLevel: 4500
+    experienceForceTheNextLevel: 3250
   - fireballDamage: 130
     grenadeDamage: 260
-    experienceForceTheNextLevel: 7000
+    experienceForceTheNextLevel: 330
   Slider: {fileID: 2012538954}
   levelValueTMP: {fileID: 830219784}
   AudioSource: {fileID: 509853259}
@@ -2566,6 +2566,7 @@ GameObject:
   - component: {fileID: 1207245902}
   - component: {fileID: 1207245905}
   - component: {fileID: 1207245904}
+  - component: {fileID: 1207245903}
   m_Layer: 0
   m_Name: Slope
   m_TagString: Untagged
@@ -2587,6 +2588,20 @@ Transform:
   m_Father: {fileID: 1150005802}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 31.075, y: 90, z: 0}
+--- !u!64 &1207245903
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207245901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1207245904
 MeshRenderer:
   m_ObjectHideFlags: 0

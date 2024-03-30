@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
         return _health.isAlive();
     }
 
-    void Start() => InitComponentLinks();
+    void Start() { InitComponentLinks(); }
 
     void Update() { PatrolUpdate(); ChaseUpdate(); AttackUpdate(); }
 
