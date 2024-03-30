@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 _moveVector; 
 
+    public Animator animator;
+
     [Header("ControllPlayer")]
     public Type type;
     public enum Type { PC, Joystick }
@@ -32,24 +34,42 @@ public class PlayerController : MonoBehaviour
 
     void InputPlayerControllerUpdate() {
         _moveVector = Vector3.zero;
+        var runDirecrion = 0;
 
         if (Input.GetKey(KeyCode.W))
+        {
             _moveVector += transform.forward;
+            runDirecrion =  1;
+        }
 
         if (Input.GetKey(KeyCode.S))
+        {
             _moveVector -= transform.forward * _speedmove;
+            runDirecrion = 2;
+        }
 
         if (Input.GetKey(KeyCode.A))
+        {
             _moveVector -= transform.right * _speedmove;
+            runDirecrion = 4;
+        }
 
         if (Input.GetKey(KeyCode.D))
+        {
             _moveVector += transform.right * _speedmove;
+            runDirecrion = 3;
+        }
 
         if (Input.GetKeyUp(KeyCode.Space) && _characterController.isGrounded)
             _fallVelocity = -_jumpForce;
 
         if (Input.GetKey(KeyCode.LeftShift))
+        {
             _characterController.Move(_moveVector * _speedRun * Time.fixedDeltaTime);
+            runDirecrion = 1;
+        }
+
+        animator.SetInteger("run", runDirecrion);
     }
 
     void PlayerPhysicsFixedUpdate() {

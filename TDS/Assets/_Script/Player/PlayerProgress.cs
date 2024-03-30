@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerProgress : MonoBehaviour
 {
@@ -15,16 +16,25 @@ public class PlayerProgress : MonoBehaviour
     private float _experienceCurrentValue = 0;
     private float _experienceTargetValue = 100;
 
+    public AudioSource AudioSource;
+    public AudioClip sound;
+
     private void Start()
     {
         SetLevel(_levelValue);
         DrawUI();
     }
 
+    private void Update()
+    {
+        if(_levelValue == 10)
+            SceneManager.LoadScene("EndGame");
+    }
+
     public void AddExperience(float value) { 
         _experienceCurrentValue += value;
         if (_experienceCurrentValue >= _experienceTargetValue) {
-           SetLevel(_levelValue = 1);
+           SetLevel(_levelValue + 1);
             _experienceCurrentValue = 0;
         }
         DrawUI();
@@ -48,5 +58,6 @@ public class PlayerProgress : MonoBehaviour
     {
         Slider.value = _experienceCurrentValue/ _experienceTargetValue;
         levelValueTMP.text = _levelValue.ToString();
+        AudioSource.PlayOneShot(sound);
     }
 }

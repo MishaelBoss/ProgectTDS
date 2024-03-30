@@ -6,7 +6,7 @@ public class FireballCaster : MonoBehaviour
 
     public Transform pointCreateFireball;
 
-    public int damage = 10;
+    public float damage = 10;
 
     void Update()
     {

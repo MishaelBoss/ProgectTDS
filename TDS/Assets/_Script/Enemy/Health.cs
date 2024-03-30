@@ -1,39 +1,36 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Health : MonoBehaviour
 {
-    public floatf value = 100;
-
-    /*[Header("UI")]
-    public Slider SliderHelth;
-    public Canvas canvas;*/
+    public float valueHealth = 100;
 
     private PlayerProgress PlayerProgress;
 
     public bool isAlive() { 
-        return value > 0;
+        return valueHealth > 0;
     }
 
     private void Start()
     {
-        /*SliderHelth.value = value;
-        canvas.gameObject.SetActive(false);*/
         PlayerProgress = FindObjectOfType<PlayerProgress>();
     }
 
     public void DealDamage(float damage) {
-        PlayerProgress.AddExperience(damage);
 
-        //SliderHelth.value -= damage;
-        if (value <= 0) {
-            Destroy(gameObject);
+        valueHealth -= damage;
+
+        PlayerProgress.AddExperience(damage);
+        if (valueHealth <= 0)
+        {
+            Die();
         }
     }
 
-    /*private void OnCollisionEnter(Collision collision)
-        => canvas.gameObject.SetActive(true);*/
-
-    void Die()
-        => Destroy(gameObject);
+    private void Die() {
+        Destroy(gameObject);
+        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
+    }
 }

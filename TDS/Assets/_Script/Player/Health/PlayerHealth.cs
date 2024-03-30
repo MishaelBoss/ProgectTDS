@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public Slider SliderHelth;
     public GameObject GameOver;
 
+    public Animator animator;
+
     private void Start()
         => InitComponentLinks();
 
@@ -32,6 +34,8 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<CameraRotation>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        animator.SetTrigger("die");
     }
 
     public void AddHealth(float amout) {
