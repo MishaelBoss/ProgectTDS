@@ -10,10 +10,15 @@ public class EnemyAI : MonoBehaviour
     public PlayerController player;
     bool _isPlayerNoticed = false;
     private PlayerHealth _player;
+    private Health _health;
 
     public float distant;
     public float viewAngle;
     public float damage = 30;
+
+    public bool IsAlive() {
+        return _health.isAlive();
+    }
 
     void Start() => InitComponentLinks();
 
@@ -41,6 +46,7 @@ public class EnemyAI : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _player = player.GetComponent<PlayerHealth>();
         NewTargetPoint();
+        _health = GetComponent<Health>();
     }
 
     void PatrolUpdate()

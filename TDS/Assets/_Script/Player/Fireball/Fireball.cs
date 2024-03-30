@@ -26,7 +26,7 @@ public class Fireball : MonoBehaviour
     void DamageEnemy(Collision collision) {
         var health = collision.gameObject.GetComponent<Health>();
         if (health != null)
-            health._value -= damage;
+            health.value -= damage;
         DestroyFireball();
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GrenadeCaster : MonoBehaviour
 {
+    public float damage = 50;
+
     public Rigidbody prefabs;
     public Transform Transform;
 
@@ -14,10 +16,11 @@ public class GrenadeCaster : MonoBehaviour
     }
 
     void CheckInputButtonCretaeGranate() {
-        if (Input.GetMouseButtonDown(1)) { 
-            var granade = Instantiate(prefabs);
-            granade.transform.position = Transform.position;
-            granade.GetComponent<Rigidbody>().AddForce(Transform.forward * Force);
-        }
+            if (Input.GetMouseButtonDown(1)) { 
+                var granade = Instantiate(prefabs);
+                granade.transform.position = Transform.position;
+                granade.GetComponent<Rigidbody>().AddForce(Transform.forward * Force);
+                granade.GetComponent<Grenade>().damage = damage;
+            }
     }
 }

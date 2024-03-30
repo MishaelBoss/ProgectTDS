@@ -7,13 +7,9 @@ public class FireballSource : MonoBehaviour
 
     public int distance;
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    public InputCheck scr;
 
-    private void Update() => RAYCASTUpdate();
+    private void Update() { RAYCASTUpdate(); CheckInputMouse();  }
 
     void RAYCASTUpdate() {
 
@@ -26,5 +22,18 @@ public class FireballSource : MonoBehaviour
             targetPoint.position = ray.GetPoint(distance);
 
         transform.LookAt(targetPoint.position);
+    }
+
+    void CheckInputMouse() {
+        if (scr.mouse == false)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }

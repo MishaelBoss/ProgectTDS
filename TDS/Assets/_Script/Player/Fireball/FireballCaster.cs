@@ -2,25 +2,21 @@
 
 public class FireballCaster : MonoBehaviour
 {
-    public Fireball fireball;
+    public Fireball fireballPrf;
 
     public Transform pointCreateFireball;
 
-    public float ShootSpeed;
-    private float ShootTimer = 0.0f;
+    public int damage = 10;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) & ShootTimer <= 0)
+        if (Input.GetMouseButtonDown(0))
             Shoot();
-
-        if (ShootTimer > 0)
-            ShootTimer -= Time.deltaTime;
     }
 
     void Shoot()
     {
-        ShootTimer = ShootSpeed;
-        Instantiate(fireball, pointCreateFireball.position, pointCreateFireball.rotation);
+        var fireball = Instantiate(fireballPrf, pointCreateFireball.position, pointCreateFireball.rotation);
+        fireball.damage = damage;
     }
 }

@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController _characterController;
 
-    private Vector3 _moveVector;
+    private Vector3 _moveVector; 
 
     [Header("ControllPlayer")]
     public Type type;
@@ -49,9 +49,7 @@ public class PlayerController : MonoBehaviour
             _fallVelocity = -_jumpForce;
 
         if (Input.GetKey(KeyCode.LeftShift))
-        {
             _characterController.Move(_moveVector * _speedRun * Time.fixedDeltaTime);
-        }
     }
 
     void PlayerPhysicsFixedUpdate() {
